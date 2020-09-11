@@ -1,0 +1,182 @@
+.page-header {
+  width: 100%;
+  height: 825px;
+  background-image: url("../img/bike-desktop.jpg");
+  background-position: center  0;
+  background-repeat: no-repeat;
+  background-color: $black;
+
+  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+    height: 340px;
+    background-image: url("../img/bike-tablet.jpg");
+
+    &--opened {
+      margin-bottom: 150px;
+    }
+
+    &--closed {
+      margin-bottom: 265px;
+    }
+  }
+
+  @media screen and (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    height: 390px;
+    background-image: url("../img/bike-mobile.jpg");
+
+    &--opened {
+      margin-bottom: 150px;
+    }
+
+    &--closed {
+      margin-bottom: 430px;
+    }
+  }
+}
+
+.page-header__nav {
+  position: relative;
+
+  @media screen and (min-width: $mobile-width) and (max-width: $desktop-width) {
+    background-color: $white;
+  }
+}
+
+.page-header__logo-img {
+  position: absolute;
+  top: 318px;
+  left: 280px;
+  cursor: pointer;
+  z-index: 1;
+
+  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+    display: block;
+    top: 25px;
+    left: 22px;
+  }
+
+  @media screen and (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    display: block;
+    top: 25px;
+    left: 17px;
+  }
+}
+
+.page-header__toggle {
+  display: none;
+
+  @media screen and (min-width: $mobile-width) and (max-width: $desktop-width) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background-image: url("../img/toggle-cross.svg");
+    background-repeat: no-repeat;
+    background-color: $white;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    z-index: 2;
+  }
+}
+
+.page-header--closed .page-header__toggle {
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background-image: url("../img/toggle-menu.svg");
+  background-color: $green;
+}
+
+.page-header__site-list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media screen and (min-width: $mobile-width) and (max-width: $desktop-width) {
+    flex-direction: column;
+    margin-top: 58px;
+  }
+}
+
+.page-header__site-item {
+  padding: 21px 0 9px;
+  border-bottom: 1px solid rgba($white, 0.2);
+  background-color: transparent;
+
+  &--aboutus {
+    padding-right: 50px;
+    padding-left: 20px;
+  }
+
+  &--types,
+  &--video {
+    padding-right: 51px;
+    padding-left: 85px;
+  }
+
+  &--contacts {
+    padding-right: 20px;
+    padding-left: 85px;
+  }
+
+  @media screen and (min-width: $mobile-width) and (max-width: $desktop-width) {
+    position: relative;
+    padding: 17px 35px 11px 16px;
+    margin-bottom: 30px;
+    text-align: left;
+    background-color: $menu-color;
+  }
+}
+
+.page-header__site-link {
+  font-weight: 300;
+  letter-spacing: -0.005em;
+  color: $white;
+  opacity: 0.7;
+
+  @media screen and (min-width: $mobile-width) and (max-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: $grey;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 17px;
+      right: 16px;
+      width: 25px;
+      height: 25px;
+      background-image: url("../img/arrow.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+
+@media screen and (min-width: $mobile-width) and (max-width: $desktop-width) {
+  .page-header--closed .page-header__nav {
+    height: 0;
+  }
+
+  .page-header__logo-wrapper {
+    position: relative;
+    padding: 20px;
+  }
+
+  .page-header--nojs .page-header__toggle,
+  .page-header--opened .page-header__logo-img,
+  .page-header--closed .page-header__site-list,
+  .page-header--opened .main-header__wrapper {
+    display: none;
+  }
+
+  .page-header--closed .page-header__logo-img,
+  .page-header--closed .main-header__wrapper {
+    display: block;
+  }
+}

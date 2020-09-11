@@ -1,0 +1,109 @@
+.video {
+  margin-bottom: 250px;
+
+  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+    margin-bottom: 154px;
+  }
+
+  @media screen and (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    margin-bottom: 120px;
+  }
+}
+
+.video__container {
+  width: 100%;
+  height: 706px;
+  background-color: $video-bgc;
+
+  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+    height: 413px;
+  }
+
+  @media screen and (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    height: 384px;
+  }
+}
+
+.video__title {
+  margin: 0;
+  padding: 121px 10px 20px 0;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: -0.005em;
+  color: $white;
+
+  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+    padding: 69px 0 20px;
+    font-size: 24px;
+  }
+
+  @media screen and (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    padding-top: 85px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+.video__description {
+  margin: 0 auto;
+  max-width: 340px;
+  margin-bottom: 55px;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 300;
+  letter-spacing: -0.005em;
+  color: $white;
+  opacity: 0.7;
+
+  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+    max-width: 430px;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    max-width: 285px;
+  }
+}
+
+.video__box {
+  position: relative;
+
+  &--bottom {
+    margin: 0 auto;
+  }
+}
+
+.video__play {
+  position: absolute;
+  left: 50%;
+  bottom: 39%;
+  width: 75px;
+  height: 75px;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/play-mobile.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+
+  &:hover,
+  &:focus {
+    border: 5px solid $green;
+  }
+
+  &:active {
+    border: 5px solid $white;
+  }
+
+  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+    bottom: 21%;
+    width: 100px;
+    height: 100px;
+    background-image: url("../img/play-tablet.svg");
+  }
+
+  @media screen and (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    bottom: 17%;
+  }
+}

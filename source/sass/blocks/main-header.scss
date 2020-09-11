@@ -1,0 +1,108 @@
+.main-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 18%;
+
+  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    padding: 0;
+  }
+}
+
+.main-header__box {
+  padding-top: 240px;
+
+  &--top {
+    margin-top: 66px;
+    max-width: 370px;
+    padding-left: 21px;
+    text-align: left;
+  }
+
+  &--bottom {
+    max-width: 370px;
+    margin-bottom: 130px;
+  }
+
+  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+    @include list-reset;
+    max-width: 530px;
+    margin: 0 auto;
+
+    &--top {
+      margin-top: 135px;
+      margin-bottom: 130px;
+      padding-left: 0;
+      text-align: center;
+    }
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 767px) {
+    @include list-reset;
+    max-width: 100%;
+
+    &--top {
+      margin-top: 121px;
+      margin-bottom: 200px;
+      text-align: center;
+    }
+  }
+
+  @media screen and (min-width: $mobile-width) and (max-width: $min-tablet-width) {
+    @include list-reset;
+    max-width: 100%;
+
+    &--top {
+      margin-top: 121px;
+      margin-bottom: 120px;
+      text-align: center;
+    }
+  }
+}
+
+.main-header__title {
+  margin: 0;
+  padding-bottom: 5px;
+  font-size: 46px;
+  font-weight: bold;
+  line-height: 64px;
+  letter-spacing: -0.005em;
+  color: $white;
+
+  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+    padding-bottom: 20px;
+    font-size: 30px;
+    line-height: 42px;
+  }
+
+  @media screen and (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    padding: 0;
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
+
+.main-header__description {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 32px;
+  letter-spacing: -0.005em;
+  mix-blend-mode: normal;
+  color: $white;
+  opacity: 0.8;
+
+  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+    max-width: 435px;
+    margin: 0 auto;
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    padding: 0 18px;
+    letter-spacing: -0.05em;
+  }
+}

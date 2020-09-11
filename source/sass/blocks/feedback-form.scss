@@ -1,0 +1,79 @@
+.feedback-form {
+  padding: 20px;
+
+  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+    padding: 20px 85px;
+  }
+
+  @media screen and (min-width: $mobile-width) and (max-width: 767px) {
+    padding: 20px 18px;
+  }
+}
+
+.feedback-form__group {
+  @include list-reset;
+  padding-bottom: 20px;
+  border: none;
+}
+
+.feedback-form__title {
+  @include list-reset;
+  padding-bottom: 19px;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.005em;
+  mix-blend-mode: normal;
+  color: $white;
+
+  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+    padding-bottom: 30px;
+    font-size: 18px;
+    color: $black;
+  }
+
+  @media screen and (min-width: $mobile-width) and (max-width: 767px) {
+    font-size: 18px;
+    line-height: 28px;
+    color: $black;
+  }
+}
+
+.feedback-form__input {
+  padding: 13px 10px 11px 30px;
+  height: 48px;
+  width: 100%;
+  font-size: 15px;
+  line-height: 24px;
+  color: rgba($text-color, 0.5);
+  border: 1px solid #c9ccd4;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 6px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $black;
+  }
+
+  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+    padding: 13px 11px 15px 21px;
+  }
+
+  @media screen and (min-width: $mobile-width) and (max-width: 767px) {
+    padding: 13px 10px 11px 21px;
+    border-radius: 4px;
+  }
+}
+
+.feedback-form__btn {
+  padding: 16px 52px;
+
+  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+    padding: 15px 50px;
+  }
+
+  @media screen and (min-width: $mobile-width) and (max-width: 767px) {
+    padding: 15px 30px;
+  }
+}

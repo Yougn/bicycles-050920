@@ -1,13 +1,195 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Велосипеды</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin="">
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement("picture");
+  </script>
+  <script src="js/picturefill.js" async=""></script>
 </head>
+
 <body>
-  <h1>Добро пожаловать в Лигу А.</h1>
+  <header class="page-header page-header--opened page-header--nojs">
+
+    <nav class="page-header__nav">
+      <div class="page-header__logo-wrapper">
+        <a class="page-header__logo-link" href="index.html">
+          <img class="page-header__logo-img" src="img/logo-moon.svg" width="67" height="20" alt="Логотип Moon">
+        </a>
+        <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      </div>
+
+      <ul class="page-header__site-list">
+        <li class="page-header__site-item page-header__site-item--aboutus">
+          <a class="page-header__site-link page-header__site-link--aboutus" href="#aboutus">О нас</a>
+        </li>
+        <li class="page-header__site-item page-header__site-item--types">
+          <a class="page-header__site-link page-header__site-link--types" href="#types">Виды велосипедов</a>
+        </li>
+        <li class="page-header__site-item page-header__site-item--video">
+          <a class="page-header__site-link page-header__site-link--video" href="#video">Видео про велосипеды</a>
+        </li>
+        <li class="page-header__site-item page-header__site-item--contacts">
+          <a class="page-header__site-link page-header__site-link--contacts" href="#contacts">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="main-header">
+      <div class="main-header__wrapper">
+        <div class="main-header__box main-header__box--top">
+          <h1 class="main-header__title">Мы продаем велосипеды</h1>
+          <p class="main-header__description">
+            Наш магазин отбирает только самые
+            лучшие велосипеды для продажи
+          </p>
+        </div>
+        <div class="main-header__box main-header__box--bottom">
+          <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+            <p class="feedback-form__title">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
+            <fieldset class="feedback-form__group feedback-form__group--name">
+              <label class="feedback-form__label feedback-form__label--name" for="name"></label>
+              <input class="feedback-form__input feedback-form__input--name" type="text" name="name" id="name" placeholder="Введите Ваше Имя" pattern="^([А-Я]{1}[а-яё]{1,23}|[A-Z]{1}[a-z]{1,23})$" required="">
+            </fieldset>
+            <fieldset class="feedback-form__group feedback-form__group--tel">
+              <label class="feedback-form__label feedback-form__label--tel" for="telephone"></label>
+              <input class="feedback-form__input feedback-form__input--tel" type="tel" name="telephone" id="telephone" placeholder="Введите Ваш номер телефона" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required="">
+            </fieldset>
+            <button class="btn feedback-form__btn" type="submit" aria-label="Кнопка подобрать велосипед мечты">
+              Подобрать велосипед мечты
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <main class="page-main">
+
+    <section class="aboutus" id="aboutus">
+      <div class="aboutus__container">
+        <h2 class="aboutus__title">Несколько фактов о нас</h2>
+        <ul class="aboutus__list">
+          <li class="aboutus__item aboutus__item--bicycles">
+            <span class="aboutus__number aboutus__number--bicycles">01</span>
+            Самый широкий выбор велосипедов!
+          </li>
+          <li class="aboutus__item aboutus__item--delivery">
+            <span class="aboutus__number aboutus__number--delivery">02</span>
+            Доставка велосипедов по всей России!
+          </li>
+          <li class="aboutus__item aboutus__item--accessories">
+            <span class="aboutus__number aboutus__number--accessories">03</span>
+            Большой выбор крутых аксессуаров!
+          </li>
+          <li class="aboutus__item aboutus__item--consultation">
+            <span class="aboutus__number aboutus__number--consultation">04</span>
+            Профессиональные консультации!
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="types" id="types">
+      <div class="types__container">
+        <h3 class="types__title">Виды велосипедов</h3>
+        <ul class="types__list">
+          <li class="types__item types__item--way">
+            <article class="types__box types__box--way">
+              <picture class="types__picture types__picture--way">
+                <source media="(min-width: 1024px)" srcset="img/bike-way-desktop.jpg">
+                <img class="types__img types__img--way" src="img/bike-way-mobile.jpg" alt="Дорожный велосипед">
+              </picture>
+              <h4 class="types__subtitle">Дорожный велосипед</h4>
+            </article>
+          </li>
+          <li class="types__item types__item--mountain">
+            <article class="types__box types__box--mountain">
+              <picture class="types__picture types__picture--mountain">
+                <source media="(min-width: 1024px)" srcset="img/bike-mountain-desktop.jpg">
+                <img class="types__img" src="img/bike-mountain-mobile.jpg" alt="Горный велосипед">
+              </picture>
+              <h4 class="types__subtitle">Горный велосипед</h4>
+            </article>
+          </li>
+          <li class="types__item types__item--child">
+            <article class="types__box types__box--child">
+              <picture class="types__picture types__picture--child">
+                <source media="(min-width: 1024px)" srcset="img/bike-child-desktop.jpg">
+                <img class="types__img" src="img/bike-child-mobile.jpg" alt="Детский велосипед">
+              </picture>
+              <h4 class="types__subtitle">Детский велосипед</h4>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="video" id="video">
+      <div class="video__container">
+        <div class="video__box video__box--top">
+          <h5 class="video__title">Видео про велосипеды</h5>
+          <p class="video__description">
+            В этом видео мы подробно расскажем про
+            особенности выбора велосипеда для себя.
+          </p>
+        </div>
+        <div class="video__box video__box--bottom">
+          <picture>
+            <source media="(min-width: 1024px)" srcset="img/video-desktop.jpg">
+            <source media="(min-width: 768px)" srcset="img/video-tablet.jpg">
+            <img class="video__img" src="img/video-mobile.jpg" alt="Видео про велосипеды">
+          </picture>
+          <button class="btn video__play" type="button" aria-label="Кнопка просмотреть видео">
+            <span class="visually-hidden">Посмотреть видео</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="map">
+      <div class="map__box map__box--top">
+        <h6 class="map__title">Как нас найти?</h6>
+        <p class="map__description">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
+      </div>
+      <div class="map__box map__box--bottom">
+        <picture>
+          <source media="(min-width: 1024px)" srcset="img/map-desktop.jpg">
+          <source media="(min-width: 768px)" srcset="img/map-tablet.jpg">
+          <img class="map__img" src="img/map-mobile.jpg" alt="Как нас найти?">
+        </picture>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+
+    <div class="contacts" id="contacts">
+      <div class="contacts__container">
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <a class="contacts__link contacts__link--post" href="puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__link contacts__link--phone" href="tel:+7(499)-784-684-46">+7 (499) -784-684-46</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
+
 </html>
