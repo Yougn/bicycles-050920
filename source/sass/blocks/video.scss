@@ -45,7 +45,7 @@
   }
 }
 
-.video__description {
+.video__box p {
   margin: 0 auto;
   max-width: 340px;
   margin-bottom: 55px;
@@ -89,10 +89,12 @@
 
   &:hover,
   &:focus {
+    opacity: 0.9;
     border: 5px solid $green;
   }
 
   &:active {
+    opacity: 0.3;
     border: 5px solid $white;
   }
 
