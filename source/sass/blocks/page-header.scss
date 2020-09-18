@@ -180,6 +180,16 @@
 }
 
 @media screen and (min-width: $mobile-width) and (max-width: $max-tablet-width) {
+  .page-header--opened .page-header__nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $white;
+    z-index: 5;
+  }
+
   .page-header--closed .page-header__nav {
     height: 0;
   }
