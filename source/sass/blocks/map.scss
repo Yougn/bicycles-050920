@@ -1,7 +1,7 @@
 .map {
   margin-bottom: 25px;
 
-  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media screen and (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     margin-bottom: 8px;
   }
 
@@ -20,7 +20,7 @@
   letter-spacing: -0.005em;
   color: $map-text;
 
-  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media screen and (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     padding-right: 0;
     padding-bottom: 20px;
     font-size: 24px;
@@ -42,7 +42,7 @@
   line-height: 31px;
   color: rgba($black, 0.7);
 
-  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media screen and (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     padding: 0;
     padding-bottom: 20px;
     max-width: 630px;

@@ -3,7 +3,7 @@
   justify-content: space-between;
   padding: 0 18%;
 
-  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media screen and (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     flex-direction: column;
     justify-content: center;
   }
@@ -28,7 +28,7 @@
     margin-bottom: 130px;
   }
 
-  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media screen and (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     @include list-reset;
     max-width: 530px;
     margin: 0 auto;
@@ -41,7 +41,7 @@
     }
   }
 
-  @media screen and (min-width: 481px) and (max-width: 767px) {
+  @media screen and (min-width: 481px) and (max-width: $max-mobile-width) {
     @include list-reset;
     max-width: 100%;
 
@@ -52,7 +52,7 @@
     }
   }
 
-  @media screen and (min-width: $mobile-width) and (max-width: $min-tablet-width) {
+  @media screen and (min-width: $mobile-width) and (max-width: 480px) {
     @include list-reset;
     max-width: 100%;
 
@@ -73,7 +73,7 @@
   letter-spacing: -0.005em;
   color: $white;
 
-  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media screen and (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     padding-bottom: 20px;
     font-size: 30px;
     line-height: 42px;
@@ -95,7 +95,7 @@
   color: $white;
   opacity: 0.8;
 
-  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media screen and (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     max-width: 435px;
     margin: 0 auto;
     font-size: 18px;

@@ -3,7 +3,11 @@
   padding: 0 109px;
   background-color: #f6f7f9;
 
-  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media screen and (min-width: $min-desktop-width) and (max-width: $mid-desktop-width) {
+    padding: 0 85px;
+  }
+
+  @media screen and (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     padding: 0 89px;
   }
 
@@ -21,7 +25,7 @@
   letter-spacing: -0.005em;
   color: $text-color;
 
-  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media screen and (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     padding: 50px 0 29px;
     font-size: 24px;
     line-height: 41px;
@@ -37,10 +41,11 @@
 .types__list {
   @include list-reset;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding-bottom: 149px;
 
-  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media screen and (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     flex-wrap: wrap;
     padding-bottom: 72px;
   }
@@ -67,7 +72,18 @@
     margin-right: 36px;
   }
 
-  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media screen and (min-width: $min-desktop-width) and (max-width: $mid-desktop-width) {
+    &--way {
+      margin-top: 10px;
+      margin-left: 0;
+    }
+
+    &--child {
+      margin-right: 0;
+    }
+  }
+
+  @media screen and (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     @include list-reset;
     width: 46%;
 
@@ -160,7 +176,7 @@
     background-color: transparent;
   }
 
-  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media screen and (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     &--way::after {
       left: -37px;
       bottom: -25px;

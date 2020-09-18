@@ -2,7 +2,7 @@
 .aboutus {
   margin-bottom: 152px;
 
-  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media screen and (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     margin-bottom: 68px;
   }
 
@@ -15,7 +15,7 @@
   margin: 0 auto;
   padding: 0 10%;
 
-  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media screen and (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     margin: 0 auto;
     padding: 0 15%;
   }
@@ -35,7 +35,7 @@
   letter-spacing: -0.005em;
   color: $text-color;
 
-  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media screen and (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     padding-bottom: 29px;
     padding-left: 0;
     font-size: 24px;
@@ -57,7 +57,7 @@
   justify-content: space-between;
   align-items: center;
 
-  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media screen and (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     width: 100%;
     flex-wrap: wrap;
     align-items: baseline;
@@ -80,7 +80,13 @@
   letter-spacing: -0.5px;
   color: $black;
 
-  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media screen and (min-width: $min-desktop-width) and (max-width: 1249px) {
+    &--consultation {
+      padding-top: 50px;
+    }
+  }
+
+  @media screen and (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     padding: 0;
     width: 50%;
 
@@ -131,7 +137,7 @@
   letter-spacing: -1px;
   color: $green;
 
-  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media screen and (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     padding: 0;
     padding-bottom: 15px;
   }

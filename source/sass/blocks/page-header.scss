@@ -2,11 +2,12 @@
   width: 100%;
   height: 825px;
   background-image: url("../img/bike-desktop.jpg");
-  background-position: center  0;
+  background-position: center auto;
   background-repeat: no-repeat;
+  background-size: 100%;
   background-color: $black;
 
-  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media screen and (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     height: 340px;
     background-image: url("../img/bike-tablet.jpg");
 
@@ -36,7 +37,7 @@
 .page-header__nav {
   position: relative;
 
-  @media screen and (min-width: $mobile-width) and (max-width: $desktop-width) {
+  @media screen and (min-width: $mobile-width) and (max-width: $max-tablet-width) {
     background-color: $white;
   }
 }
@@ -48,7 +49,7 @@
   cursor: pointer;
   z-index: 1;
 
-  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media screen and (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     display: block;
     top: 25px;
     left: 22px;
@@ -64,7 +65,7 @@
 .page-header__toggle {
   display: none;
 
-  @media screen and (min-width: $mobile-width) and (max-width: $desktop-width) {
+  @media screen and (min-width: $mobile-width) and (max-width: $max-tablet-width) {
     display: block;
     position: absolute;
     top: 0;
@@ -82,12 +83,14 @@
 }
 
 .page-header--closed .page-header__toggle {
-  top: 0;
-  right: 0;
-  width: 50px;
-  height: 50px;
-  background-image: url("../img/toggle-menu.svg");
-  background-color: $green;
+  @media screen and (min-width: $mobile-width) and (max-width: $max-tablet-width) {
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background-image: url("../img/toggle-menu.svg");
+    background-color: $green;
+  }
 }
 
 .page-header__site-list {
@@ -95,16 +98,25 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  position: relative;
 
-  @media screen and (min-width: $mobile-width) and (max-width: $desktop-width) {
+  @media screen and (min-width: $mobile-width) and (max-width: $max-tablet-width) {
     flex-direction: column;
     margin-top: 58px;
   }
 }
 
+.page-header__site-list::after {
+  content: "";
+  position: absolute;
+  top: 62px;
+  width: 873px;
+  height: 1px;
+  background-color: rgba($white, 0.2);
+}
+
 .page-header__site-item {
   padding: 21px 0 9px;
-  border-bottom: 1px solid rgba($white, 0.2);
   background-color: transparent;
 
   &--aboutus {
@@ -123,7 +135,7 @@
     padding-left: 85px;
   }
 
-  @media screen and (min-width: $mobile-width) and (max-width: $desktop-width) {
+  @media screen and (min-width: $mobile-width) and (max-width: $max-tablet-width) {
     position: relative;
     padding: 17px 35px 11px 16px;
     margin-bottom: 30px;
@@ -138,7 +150,16 @@
   color: $white;
   opacity: 0.7;
 
-  @media screen and (min-width: $mobile-width) and (max-width: $desktop-width) {
+  &:hover,
+  &:focus {
+    opacity: 0.9;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media screen and (min-width: $mobile-width) and (max-width: $max-tablet-width) {
     font-size: 20px;
     line-height: 28px;
     letter-spacing: 0.02em;
@@ -158,7 +179,7 @@
   }
 }
 
-@media screen and (min-width: $mobile-width) and (max-width: $desktop-width) {
+@media screen and (min-width: $mobile-width) and (max-width: $max-tablet-width) {
   .page-header--closed .page-header__nav {
     height: 0;
   }

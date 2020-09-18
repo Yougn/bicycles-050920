@@ -1,7 +1,7 @@
 .contacts__container {
   padding: 0 30%;
 
-  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media screen and (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     padding: 0 13%;
   }
 
@@ -18,7 +18,14 @@
   align-items: baseline;
   margin-bottom: 70px;
 
-  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media screen and (min-width: 1024px) and (max-width: 1250px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     margin-bottom: 45px;
   }
 
@@ -81,7 +88,7 @@
     }
   }
 
-  @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media screen and (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     &--phone {
       padding-right: 15px;
     }

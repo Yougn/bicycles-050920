@@ -60,3 +60,35 @@ img {
     opacity: 0.3;
   }
 }
+
+.page-main {
+  &--opened {
+    display: block;
+  }
+
+  &--closed {
+    display: none;
+  }
+
+  @media screen and (min-width: $min-desktop-width) and (max-width: 1920px) {
+    &--closed {
+      display: block;
+    }
+  }
+}
+
+.page-footer {
+  &--opened {
+    display: block;
+  }
+
+  &--closed {
+    display: none;
+  }
+
+  @media screen and (min-width: $min-desktop-width) and (max-width: 1920px) {
+    &--closed {
+      display: block;
+    }
+  }
+}

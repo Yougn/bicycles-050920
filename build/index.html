@@ -17,11 +17,11 @@
 </head>
 
 <body>
-  <header class="page-header page-header--opened page-header--nojs">
+  <header class="page-header page-header--closed page-header--nojs">
 
     <nav class="page-header__nav">
       <div class="page-header__logo-wrapper">
-        <a class="page-header__logo-link" href="index.html">
+        <a class="page-header__logo-link">
           <img class="page-header__logo-img" src="img/logo-moon.svg" width="67" height="20" alt="Логотип Moon">
         </a>
         <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -73,7 +73,7 @@
 
   </header>
 
-  <main class="page-main">
+  <main class="page-main page-main--opened">
 
     <section class="aboutus" id="aboutus">
       <div class="aboutus__container">
@@ -106,7 +106,9 @@
           <li class="types__item types__item--way">
             <article class="types__box types__box--way">
               <picture class="types__picture types__picture--way">
-                <source media="(min-width: 1024px)" srcset="img/bike-way-desktop.jpg 1px">
+                <!-- 1х: 342px; -->
+                <source media="(min-width: 1250px)" srcset="img/bike-way-desktop.jpg 1x">
+                <!-- 1х: 300px; -->
                 <img class="types__img types__img--way" src="img/bike-way-mobile.jpg" alt="Дорожный велосипед">
               </picture>
               <h4 class="types__subtitle">Дорожный велосипед</h4>
@@ -115,7 +117,9 @@
           <li class="types__item types__item--mountain">
             <article class="types__box types__box--mountain">
               <picture class="types__picture types__picture--mountain">
-                <source media="(min-width: 1024px)" srcset="img/bike-mountain-desktop.jpg 1px">
+                <!-- 1х: 342px; -->
+                <source media="(min-width: 1250px)" srcset="img/bike-mountain-desktop.jpg 1x">
+                <!-- 1х: 300px; -->
                 <img class="types__img" src="img/bike-mountain-mobile.jpg" alt="Горный велосипед">
               </picture>
               <h4 class="types__subtitle">Горный велосипед</h4>
@@ -124,7 +128,9 @@
           <li class="types__item types__item--child">
             <article class="types__box types__box--child">
               <picture class="types__picture types__picture--child">
-                <source media="(min-width: 1024px)" srcset="img/bike-child-desktop.jpg 1px">
+                <!-- 1х: 342px; -->
+                <source media="(min-width: 1250px)" srcset="img/bike-child-desktop.jpg 1x">
+                <!-- 1х: 300px; -->
                 <img class="types__img" src="img/bike-child-mobile.jpg" alt="Детский велосипед">
               </picture>
               <h4 class="types__subtitle">Детский велосипед</h4>
@@ -145,12 +151,17 @@
         </div>
         <div class="video__box video__box--bottom">
           <picture>
-            <source media="(min-width: 1024px)" srcset="img/video-desktop.jpg 1px">
-            <source media="(min-width: 768px)" srcset="img/video-tablet.jpg 1px">
+            <!-- 1х: 929px; -->
+            <source media="(min-width: 1024px)" srcset="img/video-desktop.jpg 1x">
+            <!-- 1х: 503px; -->
+            <source media="(min-width: 768px)" srcset="img/video-tablet.jpg 1x">
+            <!-- 1х: 288px; -->
             <img class="video__img" src="img/video-mobile.jpg" alt="Видео про велосипеды">
           </picture>
-          <button class="btn video__play" type="button" aria-label="Кнопка просмотреть видео">
-            <span class="visually-hidden">Посмотреть видео</span>
+          <button class="video__play" type="button" aria-label="Кнопка просмотреть видео">
+            <svg class="video__svg" width="65" height="65">
+              <use href="img/sprite.svg#icon-play"></use>
+            </svg>
           </button>
         </div>
       </div>
@@ -163,8 +174,11 @@
       </div>
       <div class="map__box map__box--bottom">
         <picture>
-          <source media="(min-width: 1024px)" srcset="img/map-desktop.jpg">
-          <source media="(min-width: 768px)" srcset="img/map-tablet.jpg">
+          <!-- 1х: 957px; -->
+          <source media="(min-width: 1024px)" srcset="img/map-desktop.jpg 1x">
+          <!-- 1х: 698px; -->
+          <source media="(min-width: 768px)" srcset="img/map-tablet.jpg 1x">
+          <!-- 1х: 320px; -->
           <img class="map__img" src="img/map-mobile.jpg" alt="Как нас найти?">
         </picture>
       </div>
@@ -172,13 +186,13 @@
 
   </main>
 
-  <footer class="page-footer">
+  <footer class="page-footer page-footer--opened">
 
     <div class="contacts" id="contacts">
       <div class="contacts__container">
         <ul class="contacts__list">
           <li class="contacts__item">
-            <a class="contacts__link contacts__link--post" href="puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
+            <a class="contacts__link contacts__link--post" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
           </li>
           <li class="contacts__item">
             <a class="contacts__link contacts__link--phone" href="tel:+7(499)-784-684-46">+7 (499) -784-684-46</a>
