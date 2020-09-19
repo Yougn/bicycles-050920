@@ -41,7 +41,7 @@
     }
   }
 
-  @media screen and (min-width: 481px) and (max-width: $max-mobile-width) {
+  @media screen and (min-width: 401px) and (max-width: $max-mobile-width) {
     @include list-reset;
     max-width: 100%;
 
@@ -52,7 +52,7 @@
     }
   }
 
-  @media screen and (min-width: $mobile-width) and (max-width: 480px) {
+  @media screen and (min-width: $mobile-width) and (max-width: 400px) {
     @include list-reset;
     max-width: 100%;
 

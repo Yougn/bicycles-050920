@@ -97,12 +97,13 @@
   @include list-reset;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  padding: 0 19.5% 0 19.5%;
   position: relative;
 
   @media screen and (min-width: $mobile-width) and (max-width: $max-tablet-width) {
     flex-direction: column;
     margin-top: 58px;
+    padding: 0;
   }
 }
 
