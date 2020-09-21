@@ -176,6 +176,16 @@
     background-color: transparent;
   }
 
+  @media screen and (min-width: $min-desktop-width) and (max-width: 1249px) {
+    &--mountain::before {
+      bottom: 235px;
+    }
+
+    &--child::before {
+      bottom: 250px;
+    }
+  }
+
   @media screen and (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     &--way::after {
       left: -37px;
